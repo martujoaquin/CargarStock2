@@ -1,3 +1,5 @@
+const btnCargar = document.querySelector("#cargar"); 
+
 /* //clase producto
 class Producto {
   constructor(nombre, precio, cantidad) {
@@ -40,7 +42,12 @@ const EjProductos=async()=>{
 
 EjProductos();
 
-setTimeout(() => {
+btnCargar.addEventListener("click",(e)=>{
+  e.preventDefault();
+  cargarProductos();
+})
+
+/* setTimeout(() => {
   Toastify({
     text: "Cargar productos",
     duration: 3000,
@@ -55,7 +62,7 @@ setTimeout(() => {
     onClick: function(){ cargarProductos() } // Callback after click
   }).showToast();
 }, 2000);
-
+ */
 
 function cargarProductos(){
   window.location.replace("./stock2.html")
